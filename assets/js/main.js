@@ -20,10 +20,8 @@ function sendMessage() {
 function onEnter(event){
     var code = 0;
     code = event.keyCode;
-    
     if(code==13){
         sendMessage();
         event.preventDefault();
     }
-    
 }
