@@ -1,14 +1,16 @@
 function sendMessage(){
     let mess = document.getElementById("messageText").value
-    let doc = document.getElementById("sentText").innerHTML;
+    var doc = document.getElementById("sentText");
+    var errorMessage = document.getElementById("emptyField");
 
 
-//?    any other method for that?   null/ undefined/ empty was not working
+
+//?    any other method for first "if"?   null/ undefined/ empty was not working
     if (mess.length == 0){
-        document.getElementById("sentText").innerHTML = ""
-        document.getElementById("emptyField").innerHTML = "Gib Nachricht ein!"
+        doc.innerHTML = "";
+        errorMessage.innerHTML = "Gib Nachricht ein!"
     } else {
-        document.getElementById("emptyField").innerHTML = ""
-        document.getElementById("sentText").innerHTML = mess
+        errorMessage.innerHTML = ""
+        doc.innerHTML = mess;
     }
 }
