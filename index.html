@@ -14,9 +14,9 @@
     <section>
         <h2>Welche Nachricht möchtest du weitergeben?</h2>
         <form>
-            <input type="text" id="messageText">
+            <input type="text" id="messageText" onkeypress="onEnter(event)">
             <br> <br>
-            <input type="button" value="Senden" onclick="sendMessage()">
+            <input type="button" id="myBtn" value="Senden" onclick="sendMessage()">
         </form>
         <h4 id="emptyField"></h4>
         <h3>Letzte Nachricht:</h3>
